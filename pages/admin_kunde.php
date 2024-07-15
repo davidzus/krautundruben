@@ -34,8 +34,6 @@ if (!isset($_SESSION['user'])) {
                     <button class="add_statement_btn" name="Select">Select</button>
                     <button class="add_statement_btn" name="Update">Update</button>
                     <button class="add_statement_btn" name="Add">Add</button>
-                    <button class="add_statement_btn" name="ChooseCategory">Choose category</button>
-                    <button class="add_statement_btn" name="ChooseNeverSold">Choose never sold</button>
                     <button type="submit" class="add_statement_btn" name="Delete">Delete</button>
                 </div>
                 <form method="GET" class="statement_form">
