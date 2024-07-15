@@ -70,8 +70,6 @@ if (!isset($_SESSION['user'])) {
                             <th class="result_table-title">Vorname</th>
                             <th class="result_table-title">Nachname</th>
                             <th class="result_table-title">Geb_Datum</th>
-                            <th class="result_table-title">Stadt</th>
-                            <th class="result_table-title">Straße</th>
                         </tr>
                         <?php
 
@@ -91,8 +89,6 @@ if (!isset($_SESSION['user'])) {
                                 <td class="result_table-result">' . $row['Vorname'] . '</td>
                                 <td class="result_table-result">' . $row['Nachname'] . '</td>
                                 <td class="result_table-result">' . $row['Geb_Datum'] . '</td>
-                                <td class="result_table-result">' . $row['Stadt'] . '</td>
-                                <td class="result_table-result">' . $row['Straße'] . '</td>
                             </tr>';
                                 }
                             } else {
