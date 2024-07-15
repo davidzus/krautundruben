@@ -23,6 +23,7 @@ if (!isset($_SESSION['user'])) {
             <ul class="menu">
                 <li class="active menu-item"><a href="../pages/panel.php"><i class="fa-solid fa-carrot" style="color: #fdfdfd;"></i>Zutaten</a></li>
                 <li class="menu-item"><a href="../pages/admin_recipes.php"><i class="fa-solid fa-receipt" style="color: #fdfdfd;"></i>Rezepte</a></li>
+                <li class="menu-item"><a href="../pages/admin_kunde.php"><i class="fa-solid fa-user" style="color: #fdfdfd;"></i></i>Kunde</a></li>
                 <li class="menu-item"><a href="../pages/logout.php"><i class="fa-solid fa-arrow-right-from-bracket "style="color: #fdfdfd;"></i>Logout</a></li>
             </ul>
         </div>

@@ -23,8 +23,8 @@ if (!isset($_SESSION['user'])) {
         <div class="toolbar-container">
             <ul class="menu">
                 <li class="menu-item"><a href="../pages/panel.php"><i class="fa-solid fa-carrot" style="color: #fdfdfd;"></i>Zutaten</a></li>
-                <li class="active menu-item"><a href="../pages/admin_recipes.php"><i class="fa-solid fa-receipt" style="color: #fdfdfd;"></i>Rezepte</a></li>
-                <li class="menu-item"><a href="../pages/admin_kunde.php"><i class="fa-solid fa-user" style="color: #fdfdfd;"></i></i>Kunde</a></li>
+                <li class="menu-item"><a href="../pages/admin_recipes.php"><i class="fa-solid fa-receipt" style="color: #fdfdfd;"></i>Rezepte</a></li>
+                <li class="active menu-item"><a href="../pages/admin_kunde.php"><i class="fa-solid fa-user" style="color: #fdfdfd;"></i></i>Kunde</a></li>
                 <li class="menu-item"><a href="../pages/logout.php"><i class="fa-solid fa-arrow-right-from-bracket " style="color: #fdfdfd;"></i>Logout</a></li>
             </ul>
         </div>
@@ -65,17 +65,18 @@ if (!isset($_SESSION['user'])) {
                 <div class="table_container">
                     <table class="result_table">
                         <tr class="result_table-title-row">
-                            <th class="result_table-title">Rezept ID</th>
-                            <th class="result_table-title">Rezept Bez</th>
-                            <th class="result_table-title">Rezept Preis</th>
-                            <th class="result_table-title">Rezept Beschreibung</th>
-                            <th class="result_table-title">Zutat Menge</th>
-                            <th class="result_table-title">Img Link</th>
+                            <th class="result_table-title">
+                                Kunde Nr</th>
+                            <th class="result_table-title">Vorname</th>
+                            <th class="result_table-title">Nachname</th>
+                            <th class="result_table-title">Geb_Datum</th>
+                            <th class="result_table-title">Stadt</th>
+                            <th class="result_table-title">Straße</th>
                         </tr>
                         <?php
 
 
-                        $sql = "SELECT * FROM Rezepte";
+                        $sql = "SELECT * FROM Kunde";
                         if (isset($_GET['statement']) && !empty($_GET['statement'])) {
                             $sql = $_GET['statement'];
                         }
@@ -86,12 +87,12 @@ if (!isset($_SESSION['user'])) {
                                 while ($row = mysqli_fetch_assoc($result)) {
                                     echo '';
                                     echo '<tr class="result_table-result-row">
-                                <td class="result_table-result">' . $row['Rez_ID'] . '</td>
-                                <td class="result_table-result">' . $row['Rez_Bez'] . '</td>
-                                <td class="result_table-result">' . $row['Rez_Preis'] . '</td>
-                                <td class="result_table-result">' . $row['Rez_Besch'] . '</td>
-                                <td class="result_table-result">' . $row['Zutat_Menge'] . '</td>
-                                <td class="result_table-result">' . $row['Img_Link'] . '</td>
+                                <td class="result_table-result">' . $row['Kund_Nr'] . '</td>
+                                <td class="result_table-result">' . $row['Vorname'] . '</td>
+                                <td class="result_table-result">' . $row['Nachname'] . '</td>
+                                <td class="result_table-result">' . $row['Geb_Datum'] . '</td>
+                                <td class="result_table-result">' . $row['Stadt'] . '</td>
+                                <td class="result_table-result">' . $row['Straße'] . '</td>
                             </tr>';
                                 }
                             } else {
@@ -111,7 +112,7 @@ if (!isset($_SESSION['user'])) {
         </section>
 
     </main>
-    <script src="../assets/js/panel_recipes.js" type="text/javascript"></script>
+    <script src="../assets/js/panel_kunde.js" type="text/javascript"></script>
 </body>
 
 </html>
