@@ -25,21 +25,3 @@ filterTitle.forEach((item) => {
 
 // Product Count
 productResultCount.innerHTML = `Showing ${productResults.length} results`;
-
-// Filter Params History Function
-
-loadCheckboxesStates();
-function loadCheckboxesStates(){
-    const form = document.querySelector(".product_filter");
-    const search = document.getElementById("search");
-    const params = new URLSearchParams(window.location.search);
-    params.forEach((value,key) => {
-        if (key == 'search'){
-            search.value = value;
-        }
-        const checkboxes = form.querySelectorAll(`input[type='checkbox'][value="${value}"]`);
-        for(let checkbox of checkboxes){
-            checkbox.checked = true;
-        }
-});
-}

@@ -25,10 +25,12 @@ DELETE FROM Rez_Zutat WHERE Rez_ID = @v_Rez_ID;`;
             sqlStatementsTextarea.value = `UPDATE Rezepte SET Rezepte.Feld_Name = ??? WHERE Rezepte.Feld_Name = ???`
         } else if (e.target.name == "Select") {
             sqlStatementsTextarea.value = `SELECT * FROM Rezepte`;
-        } else if (e.target.name == "ChooseNotUsed") {
-            sqlStatementsTextarea.value = `SELECT Zutat.Zutat_ID, Zutat.* FROM Zutat 
-LEFT JOIN Rez_Zutat ON Rez_Zutat.Zutat_ID = Zutat.Zutat_ID 
-WHERE Rez_Zutat.Zutat_ID IS null;`
+        } else if (e.target.name == "ChooseCategory") {
+            sqlStatementsTextarea.value = `SELECT R.Rez_Bez , R.*
+FROM Rezepte R
+INNER JOIN Rez_Ctg RC ON R.Rez_ID = RC.Rez_ID
+INNER JOIN Category C ON RC.Ctg_ID = C.Ctg_ID
+WHERE C.Ctg_Bez = 'Ernährungskategorie';`
         } else if (e.target.name == "ChooseNeverSold") {
             sqlStatementsTextarea.value = `SELECT Rezepte.Rez_ID, Rezepte.* FROM Rezepte 
 LEFT JOIN Bes_Rez ON Bes_Rez.Rez_ID = Rezepte.Rez_ID
@@ -45,5 +47,18 @@ function loadSqlStatement(){
     const params = new URLSearchParams(window.location.search);
     params.forEach((value,key) => {
         sqlStatementsTextarea.value = value;
+});
+}
+// SQL Params History Function
+
+loadSqlHistory();
+function loadSqlHistory(){
+    const params = new URLSearchParams(window.location.search);
+    console.log('active');
+    params.forEach((value,key) => {
+        console.log(key, value);
+        if (key == 'statement'){
+            sqlStatementsTextarea.value = value;
+        }
 });
 }

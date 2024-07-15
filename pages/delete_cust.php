@@ -19,7 +19,7 @@ $stmt = $connection->prepare($sql);
 if ($stmt) {
     // Parametre bağlama işlemi yapılıyor
     $stmt->bind_param("i", $Cust_ID);
-    
+
     // Sorguyu çalıştır
     $stmt->execute();
 
@@ -32,6 +32,13 @@ if ($stmt) {
             $stmt_adr->bind_param("i", $Cust_ID);
             $stmt_adr->execute();
         }
+        // Kunde tablosundan sil
+        $sql_kunde = "DELETE FROM Kunde WHERE Kund_Nr = ?";
+        $stmt_kunde = $connection->prepare($sql_kunde);
+        if ($stmt_kunde) {
+            $stmt_kunde->bind_param("i", $Cust_ID);
+            $stmt_kunde->execute();
+        }
 
         // Bestellung tablosundan sil
         $sql_best = "DELETE FROM Bestellung WHERE Kund_Nr = ?";
@@ -40,6 +47,7 @@ if ($stmt) {
             $stmt_best->bind_param("i", $Cust_ID);
             $stmt_best->execute();
         }
+
 
         // Oturumu temizle ve yok et
         session_unset();
@@ -61,4 +69,3 @@ if ($stmt) {
 // Bağlantıyı kapat
 $connection->close();
 exit();
-?>
