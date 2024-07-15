@@ -1,0 +1,117 @@
+@import "./reset.css";
+@import "./font.css";
+@import "./admin_panel_toolbar.css";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+:root {
+  --black--: rgb(74, 74, 74);
+  --black-hover--: rgb(84, 84, 84);
+  --blue--: rgb(62, 116, 203);
+  --gray-background--: #fdfdfd;
+  --gray--: #ccc;
+}
+
+* {
+  font-family: "Domine", serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(200px, 300px) 1fr;
+  background-color: var(--gray-background--);
+}
+section{
+  height: 100%;
+  padding: 1rem;
+  overflow-y: auto;
+}
+.overview_item{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.controls{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.add_statement_btn{
+  cursor: pointer;
+  padding: .5rem 1rem;
+  font-size: .9rem;
+  color: var(--gray-background--);
+  border: none;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black--);
+}
+.statement_form{
+  height: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+}
+
+.sql_statements{
+  height: 80%;
+  width: 80%;
+  border: 1px solid var(--black--);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  resize: none;
+  font-size: 1rem;
+  word-spacing: .4rem;
+}
+.run_button{
+  cursor: pointer;
+  height: 2.5rem;
+  width: 3rem;
+  font-size: .9rem;
+  color: var(--gray-background--);
+  border: none;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black--);
+}
+
+
+
+
+
+
+.table_container{
+  flex: 1;
+  width: 100%;
+  padding: .5rem;
+  border: 1px solid var(--black--);
+  border-radius: 5px;
+  overflow-y: auto;
+}
+
+td,th,table{
+  padding: 1rem .5rem;
+  border: 1px solid var(--black--);
+  border-collapse: collapse;
+}
+td{
+  overflow: hidden;
+}
+

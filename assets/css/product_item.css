@@ -1,0 +1,219 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+.product_list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+  font-family: "Domine", serif;
+}
+.product_filter {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgb(11, 11, 11);
+  padding-bottom: 1rem;
+}
+.filter-search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#search {
+  flex: 1;
+  max-width: 50rem;
+  height: 2rem;
+  padding: 0 1rem;
+  border-radius: 3px 0 0 3px;
+  border: 1px solid rgba(107, 107, 107, 0.813);
+  outline: none;
+  font-size: 1rem;
+}
+#search_btn {
+  height: 2rem;
+  width: 5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0 3px 3px 0;
+  border: 1px solid rgba(107, 107, 107, 0.813);
+  border-left: none;
+  color: rgb(243, 243, 243);
+  background-color: rgb(59, 59, 59);
+  transition: all 0.2s;
+
+}
+#search_btn:hover {
+  transform: scale(1.01);
+}
+#search_btn:active {
+  transform: scale(1);
+}
+.filter {
+  width: 80%;
+  min-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  overflow: hidden;
+  transition: all 1s;
+}
+.filter-title-icon {
+  display: inline-block;
+  transform: rotate(90deg);
+  transition: all 0.3s;
+}
+.filter-title-icon.active {
+  transform: rotate(270deg);
+}
+.filter-title {
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgb(102, 102, 102);
+  padding-bottom: 0.5rem;
+}
+.filter-options {
+  height: 0px;
+  display: flex;
+  width: 80%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  font-size: 1rem;
+  transition: all 0.3s;
+  opacity: 0;
+  overflow: hidden;
+}
+.filter-options.active {
+  height: fit-content;
+  opacity: 1;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  transition: all 0.3s;
+}
+.filter-option{
+  display: flex;
+  gap: .5rem;
+  width: 15rem;
+}
+input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+.filter-options label {
+  flex: 1;
+}
+.filter_button{
+  cursor: pointer;
+  width: 6rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(65, 65, 65);
+  color: rgb(255, 255, 255);
+  transition: all .2s;
+}
+.filter_button:hover{
+  transform: scale(1.015);
+  letter-spacing: 1px;
+}
+.filter_button:active{
+  transform: scale(1);
+}
+.product_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+.product_result_count{
+  width: 90%;
+}
+.product_item {
+  cursor: pointer;
+  width: 90%;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  border: 1px solid rgb(11, 11, 11);
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(65, 65, 65, 0.671);
+  transition: all 0.2s;
+}
+.product_item:hover {
+  transform: scale(1.002);
+}
+.product_item-img {
+  flex: 2;
+  height: 100%;
+}
+.product_item-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  object-fit: cover;
+}
+.product_item-details {
+  flex: 4;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+.product_item-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.product_item-description {
+  flex: 2;
+  font-size: 0.85rem;
+  color: rgb(102, 102, 102);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.product_item-checkout {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  row-gap: 0.5rem;
+}
+.product_order_count{
+  width: 100%;
+  text-align: right;
+  font-size: .8rem;
+
+}
+.add_cart-btn {
+  cursor: pointer;
+  color: rgb(243, 243, 243);
+  background-color: rgb(59, 59, 59);
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+}
+.product_item-checkout-price {
+  text-align: right;
+  font-size: 1.1rem;
+  font-weight: 600;
+}

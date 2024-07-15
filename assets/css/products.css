@@ -1,0 +1,16 @@
+@import "./slider.css";
+
+.products {
+  margin-top: 5rem;
+  padding: 0 1rem;
+  height: auto;
+}
+.products_title {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+}

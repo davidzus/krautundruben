@@ -1,0 +1,30 @@
+.toolbar-container {
+  height: 100%;
+  border: 1px solid black;
+  background-color: rgb(74, 74, 74);
+  color: rgb(238, 238, 238);
+  transition: all 0.3s;
+}
+
+.menu-item.active {
+  color: var(--gray-background--);
+  background-color: rgb(47, 47, 47);
+}
+.menu-item a {
+  cursor: pointer;
+  display: block;
+  padding: 15px 20px;
+}
+.menu-item a:hover:not(li.active > a) {
+  background-color: rgb(84, 84, 84);
+}
+.menu-item i {
+  margin-right: 5px;
+}
+.mobile-menu_active {
+  color: var(--gray-background--);
+}
+.mobile-menu_active .menu-item {
+  animation: mobile_menu-show 0.3s ease-in-out 0.4s 1 forwards normal;
+}
+

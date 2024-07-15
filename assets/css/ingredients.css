@@ -1,0 +1,12 @@
+.product_item-img {
+    flex: 2;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  div.product_item-img img {
+    height: 100%;
+    width: auto;
+    border-radius: 3px;
+    object-fit: cover;
+  }

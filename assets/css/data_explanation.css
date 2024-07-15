@@ -1,0 +1,41 @@
+@import './reset.css';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Domine", serif;
+}
+
+body,html{
+    width: 100%;
+    height: 100vh;
+}
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/header.jpg");
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-size: cover;
+}
+.data_potect{
+    color: rgb(232, 232, 232);
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 80%;
+    height: 100%;
+    padding: 1rem;
+    overflow-y: auto;
+    font-size: 1.2rem;
+    scrollbar-width: 3px;
+    scrollbar-color: #414141 #1c1c1c;
+}
+.data_potect::-webkit-scrollbar{
+    width: 30px;
+}
+h3{
+    margin: 1rem 0;
+}

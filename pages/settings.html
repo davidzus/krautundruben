@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/main.css" type="text/css">
+    <title>Cards</title>
+</head>
+<body>
+    <main>
+        
+        <div class="toolbar-container">
+            <ul class="menu">
+                <li class="active menu-item"><a href="./index.html"><i class="fa-solid fa-chart-pie"></i>Başlangıç</a></li>
+                <li class="menu-item"><a href="./settings.html"><i class="fa-solid fa-gears"></i>Ayarlar</a></li>
+            </ul>
+        </div>
+        <section class="add_new_word ctg-grid-cont4x">
+            <div class="new_word_box">
+                <h1>Kelime Ekle</h1>
+                <form id="new_word_form">
+                    <label for="word">Kelime</label>
+                    <input type="text" name="word" id="word">
+                    <label for="word_type">Kelime Türü</label>
+                    <select name="word_type" id="word_type" required>
+                        <option value="default" selected disabled>-</option>
+                        <option value="name">name</option>
+                        <option value="verb">verb</option>
+                        <option value="adjective">adjective</option>
+                    </select>
+                    <label for="word_tr">Kelime TR</label>
+                    <input type="text" name="word_tr" id="word_tr">
+                    <label for="word_en">Kelime EN</label>
+                    <input type="text" name="word_en" id="word_en">
+                    <label for="word_example">Örnek</label>
+                    <textarea name="word_example" id="word_example"></textarea>
+                    <label for="word_example_tr">Örnek TR</label>
+                    <textarea name="word_example_tr" id="word_example_tr"></textarea>
+                    <label for="word_example_en">Örnek EN</label>
+                    <textarea name="word_example_en" id="word_example_en"></textarea>
+                    <button type="submit" id="add_new_word-btn">Ekle</button>
+                </form>
+            </div>
+
+        </section>
+        
+    </main>
+<script src="../assets/js/main.js" type="module"></script>
+</body>
+</html>
